@@ -45,6 +45,11 @@ body {
 
 }
 
+.bookwise-logo:hover{
+  color: #ff7118;
+  transition: 0.2s;
+}
+
 .devfoundry-card {
   width: 100%;
   aspect-ratio: 1 / 1;
