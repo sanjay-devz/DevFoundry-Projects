@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Discover your next favorite book with BookWise." />
+  <title>BookWise — Find Your Next Favorite Book</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="landing-page" id="home">
+    <div class="corner-shape corner-shape--top" aria-hidden="true"></div>
+    <div class="corner-shape corner-shape--bottom" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="BookWise home">
+        <svg class="brand-icon" viewBox="0 0 64 54" role="img" aria-label="Open book logo">
+          <path d="M31 12C22 4 12 4 3 7v36c10-3 20-2 29 6V12Z"/>
+          <path d="M33 12c9-8 19-8 28-5v36c-10-3-20-2-28 6V12Z"/>
+          <path d="M7 13v25M57 13v25M32 13v36"/>
+          <path d="M15 16c4 0 8 1 11 3M15 23c4 0 8 1 11 3M40 19c3-2 7-3 11-3M40 26c3-2 7-3 11-3"/>
+          <text x="32" y="32" text-anchor="middle">B</text>
+        </svg>
+        <span>bookwise</span>
+      </a>
+
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="login-button" id="loginButton" type="button">Login</button>
+    </header>
+
+    <section class="hero" id="about">
+      <div class="hero-copy">
+        <h1>BOOKWISE</h1>
+        <p>
+          Discover your next favorite book with BookWise. Tell us how
+          you feel, and find stories that match your mood, spark your
+          imagination, and inspire your next adventure.
+        </p>
+        <a class="discover-button" href="#discover">Discover</a>
+      </div>
+
+      <div class="book-gallery" id="discover" aria-label="Featured books">
+        <a class="book-card book-card--fault" href="#discover" aria-label="Explore The Fault in Our Stars">
+          <img src="https://covers.openlibrary.org/b/isbn/9780142424179-L.jpg"
+               alt="The Fault in Our Stars by John Green"
+               onerror="this.onerror=null;this.src='https://placehold.co/220x340/24a4d1/ffffff?text=The+Fault+in+Our+Stars';">
+        </a>
+        <a class="book-card book-card--atomic" href="#discover" aria-label="Explore Atomic Habits">
+          <img src="https://covers.openlibrary.org/b/isbn/9780735211292-L.jpg"
+               alt="Atomic Habits by James Clear"
+               onerror="this.onerror=null;this.src='https://placehold.co/220x340/f8f2df/3c3326?text=Atomic+Habits';">
+        </a>
+        <a class="book-card book-card--alchemist" href="#discover" aria-label="Explore The Alchemist">
+          <img src="https://covers.openlibrary.org/b/isbn/9780062315007-L.jpg"
+               alt="The Alchemist by Paulo Coelho"
+               onerror="this.onerror=null;this.src='https://placehold.co/220x340/e84b20/fff3c8?text=The+Alchemist';">
+        </a>
+      </div>
+    </section>
+
+    <footer class="site-footer" id="contact">
+      <span>Stories for every mood.</span>
+      <a href="mailto:hello@bookwise.example">Contact BookWise</a>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
