@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cream: #fff5d6;
+  --orange: #ff7118;
+  --dark: #302e29;
+  --text: #555449;
+}
+
+body {
+  font-family: "Rajdhani", sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.about-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 0.85fr 2px 1fr;
+  gap: 32px;
+  padding: 38px 3%;
+  overflow: hidden;
+}
+
+/* Left section */
+.about-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 35px;
+}
+
+.bookwise-logo {
+  color: #36445a;
+  font-size: 52px;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+.devfoundry-card {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: var(--dark);
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+}
+
+.devfoundry-card img {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Vertical divider */
+.divider {
+  width: 2px;
+  background: var(--dark);
+  min-height: 100%;
+}
+
+/* Right section */
+.about-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 5px 0 0 8px;
+}
+
+.about-right h1 {
+  font-size: clamp(42px, 5vw, 68px);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 26px;
+}
+
+.developer {
+  margin-bottom: 24px;
+}
+
+.developer h2 {
+  font-size: clamp(19px, 2vw, 27px);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.developer h3 {
+  color: var(--orange);
+  font-size: 27px;
+  font-weight: 600;
+  margin: 8px 0;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+  margin-top: 10px;
+}
+
+.social-links a {
+  color: var(--orange);
+  font-size: 32px;
+  text-decoration: none;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.social-links a:hover {
+  color: var(--dark);
+  transform: translateY(-3px);
+}
+
+.about-description {
+  width: 100%;
+  margin-top: 12px;
+  padding: 22px 28px;
+  background: var(--dark);
+  color: var(--orange);
+  border-radius: 24px;
+  text-align: center;
+}
+
+.about-description p {
+  font-size: clamp(17px, 1.8vw, 24px);
+  font-weight: 500;
+  line-height: 1.55;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .about-page {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 24px 6%;
+  }
+
+  .about-left {
+    gap: 18px;
+  }
+
+  .bookwise-logo {
+    font-size: 42px;
+    margin-left: 5px;
+  }
+
+  .devfoundry-card {
+    max-width: 340px;
+    align-self: center;
+  }
+
+  .divider {
+    width: 100%;
+    min-height: 2px;
+    height: 2px;
+  }
+
+  .about-right {
+    padding: 0;
+  }
+
+  .about-right h1 {
+    margin-bottom: 20px;
+  }
+
+  .about-description {
+    margin-top: 8px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .social-links {
+    gap: 30px;
+  }
+
+  .about-description {
+    padding: 16px;
+  }
+}
