@@ -89,7 +89,10 @@ a { color: inherit; }
   transition: color .2s ease;
   justify-content: center;
 }
-.main-nav a:hover { color: #f17e30; }
+.main-nav a:hover { 
+  color: #f17e30; 
+  text-decoration: underline ;
+  transition: 0.2s;}
 #loginButton {
   width: 100px;
   min-width: 100px;
@@ -99,7 +102,7 @@ a { color: inherit; }
   box-sizing: border-box;
   color: #202A24;
   opacity: 80%;
-  border-color:#202A24;
+  border-color:#B65107;
   opacity: 80%;
   background-color: #B65107;
 }
@@ -107,6 +110,9 @@ a { color: inherit; }
   color: #B65107;
   background-color: #FCF1D5;
   border-color: #FCF1D5;
+  transform: translateY(-2px);
+  transition: background 0.2s ease;
+  
 }
 
 .menu-toggle { display: none; }
