@@ -55,7 +55,9 @@ body {
   align-items: center;
   color: #344b70;
   text-decoration: none;
+  cursor: default;
 }
+
 
 .brand-logo {
   display: block;
