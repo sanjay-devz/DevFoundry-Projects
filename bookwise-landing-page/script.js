@@ -16,8 +16,3 @@ mainNav.querySelectorAll("a").forEach((link) => {
 document.querySelector(".discover-button").addEventListener("click", () => {
   document.querySelector("#discover").scrollIntoView({ behavior: "smooth", block: "center" });
 });
-
-document.querySelector("#loginButton").addEventListener("click", () => {
-  // Replace this demo message with your login page/modal when authentication is added.
-  alert("Login page coming soon!");
-});

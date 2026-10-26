@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff0cc">
+  <title>Login | BookWise</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="page">
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="BookWise home">
+        <img src="assests/favicon.png" id="favicon">
+        
+      </a>
+      <a class="signup-top" href="#" data-demo-link>Sign up</a>
+    </header>
+
+    <main>
+      <section class="welcome" aria-labelledby="welcome-title">
+        <h1 id="welcome-title">WELCOME</h1>
+        <p>Your next favourite book is waiting.</p>
+      </section>
+
+      <section class="login-card" aria-labelledby="login-title">
+        <h2 id="login-title">Login To BookWise</h2>
+
+        <form id="loginForm">
+          <div class="form-field">
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email"
+                   placeholder="Enter Email address" autocomplete="email" required>
+          </div>
+
+          <div class="form-field password-field">
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password"
+                   placeholder="Enter Password" autocomplete="current-password" required>
+          </div>
+
+          <div class="form-options">
+            <label class="remember" for="remember">
+              <input id="remember" name="remember" type="checkbox">
+              <span>Remember me</span>
+            </label>
+            <a href="#" data-demo-link class="forgot-link">Forgot Password?</a>
+          </div>
+
+          <button class="login-button" type="submit">LOGIN</button>
+        </form>
+
+        <p class="signup-prompt">Don’t have an account? <a href="#" data-demo-link>Sign up</a></p>
+      </section>
+    </main>
+
+    <footer class="tagline">DISCOVER · READ · GROW</footer>
+  </div>
+
+  <script>
+    // Demo behaviour only: connect these links and the form to your backend when ready.
+    document.querySelectorAll("[data-demo-link]").forEach(function (link) {
+      link.addEventListener("click", function (event) {
+        event.preventDefault();
+      });
+    });
+
+    document.getElementById("loginForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+      if (!this.reportValidity()) return;
+      alert("The design is ready. Connect this form to your login system to sign in.");
+    });
+  </script>
+</body>
+</html>
