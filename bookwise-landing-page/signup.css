@@ -1,12 +1,12 @@
 
 :root {
-    --cream: #fff1d1;
-    --cream-light: #fff4d8;
+    --cream: #FEF0CC;
+    --cream-light: #FEF0CC;
     --charcoal: #49453d;
     --orange: #fa852b;
     --orange-hover: #ed7622;
     --navy: #4b5268;
-    --white: #fffaf0;
+    --white: #FEF0CC;
 }
 
 * {
@@ -219,7 +219,7 @@ body {
 #favicon-logo{
     width: 55px;
     height: 44px;
-    cursor: default;
+    cursor: pointer;
 }
 
 
