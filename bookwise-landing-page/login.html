@@ -14,7 +14,7 @@
         <img src="assests/favicon.png" id="favicon">
         
       </a>
-      <a class="signup-top" href="#" data-demo-link>Sign up</a>
+      <a class="signup-top" href="signup.html">Sign up</a>
     </header>
 
     <main>
@@ -50,7 +50,7 @@
           <button class="login-button" type="submit">LOGIN</button>
         </form>
 
-        <p class="signup-prompt">Don’t have an account? <a href="#" data-demo-link>Sign up</a></p>
+        <p class="signup-prompt">Don’t have an account? <a href="signup.html" data-demo-link>Sign up</a></p>
       </section>
     </main>
 
@@ -59,12 +59,12 @@
 
   
 <script>
-    // Demo behaviour only: connect these links and the form to your backend when ready.
-    document.querySelectorAll("[data-demo-link]").forEach(function (link) {
-      link.addEventListener("click", function (event) {
+    document.querySelectorAll(".forgot-link").forEach(function (link) {
+    link.addEventListener("click", function (event) {
         event.preventDefault();
-      });
+        alert("Forgot Password functionality is not connected yet.");
     });
+});
 
     // Show or hide the password using the Remember me checkbox.
     const passwordInput = document.getElementById("password");

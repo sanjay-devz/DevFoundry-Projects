@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Create your BookWise account and discover your next favorite book.">
+
+    <title>Sign Up | BookWise</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="signup.css">
+</head>
+
+<body>
+
+    <main class="signup-page">
+
+        <!-- Header -->
+        <header class="site-header">
+
+            <a class="brand" href="index.html" aria-label="BookWise home">
+
+                <img src="assests/favicon.png" id="favicon-logo">
+
+            </a>
+
+            <a href="login.html" class="login-button">Login</a>
+
+        </header>
+
+        <!-- Signup Form -->
+        <section class="signup-container" aria-labelledby="signup-title">
+
+            <h1 id="signup-title">Register To BookWise</h1>
+
+            <form action="#" method="post" class="signup-form">
+
+                <!-- Email -->
+                <div class="form-group email-group">
+                    <label for="email">Email address</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter Email address"
+                        autocomplete="email"
+                        required>
+                </div>
+
+                <!-- Password -->
+                <div class="form-group password-group">
+                    <label for="password">Password</label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter Password"
+                        autocomplete="new-password"
+                        minlength="8"
+                        required>
+
+                    <label class="remember-option" for="remember-password">
+                        <input
+                            type="checkbox"
+                            id="remember-password"
+                            name="remember-password">
+
+                        <span>Remember me</span>
+                    </label>
+                </div>
+
+                <!-- Confirm Password -->
+                <div class="form-group confirm-group">
+                    <label for="confirm-password">Confirm Password</label>
+
+                    <input
+                        type="password"
+                        id="confirm-password"
+                        name="confirm-password"
+                        placeholder="Re - Enter Password"
+                        autocomplete="new-password"
+                        minlength="8"
+                        required>
+
+                    <label class="remember-option" for="remember-confirm">
+                        <input
+                            type="checkbox"
+                            id="remember-confirm"
+                            name="remember-confirm">
+
+                        <span>Remember me</span>
+                    </label>
+                </div>
+
+                <!-- Sign Up Button -->
+                <button type="submit" class="signup-button">
+                    Sign Up
+                </button>
+
+            </form>
+
+        </section>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <p>DISCOVER · READ · GROW</p>
+        </footer>
+
+    </main>
+
+<script>
+    // Password visibility
+    const passwordInput = document.getElementById("password");
+    const rememberPassword = document.getElementById("remember-password");
+
+    const confirmPasswordInput = document.getElementById("confirm-password");
+    const rememberConfirm = document.getElementById("remember-confirm");
+
+    // Show or hide the password
+    rememberPassword.addEventListener("change", function () {
+        passwordInput.type = this.checked ? "text" : "password";
+    });
+
+    // Show or hide the confirm password
+    rememberConfirm.addEventListener("change", function () {
+        confirmPasswordInput.type = this.checked ? "text" : "password";
+    });
+</script>
+
+</body>
+</html>
