@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f4ef">
+  <meta name="description" content="Create, refine, and save color palettes with PalettePair.">
+  <title>PalettePair — Find your next color story</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="PalettePair home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>palettepair<span class="brand-period">.</span></a>
+    <span class="topbar-note"><span class="status-dot"></span> Your next color story starts here</span>
+    <a class="github-link" href="#about">About the tool <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="page-title">
+      <p class="eyebrow"><span>01</span> COLOR DISCOVERY STUDIO</p>
+      <h1 id="page-title">Find your next<br><span>color story.</span></h1>
+      <p class="hero-copy">Five colors. Endless directions. Generate a palette, lock the shades you love, and let the rest find their place.</p>
+    </section>
+
+    <section class="studio" aria-label="Palette generator">
+      <div class="palette-meta"><span class="section-label">YOUR PALETTE</span><span class="palette-hint">Press <kbd>Space</kbd> to explore</span></div>
+      <div class="swatches" id="swatches" aria-live="polite" aria-label="Current five-color palette"></div>
+      <div class="palette-toolbar">
+        <p class="microcopy"><span class="sparkle" aria-hidden="true">✳</span> Keep what clicks. Change what doesn’t.</p>
+        <div class="toolbar-actions">
+          <button class="button button-secondary" id="save-button" type="button"><span aria-hidden="true">＋</span> Save palette</button>
+          <button class="button button-primary" id="generate-button" type="button"><span class="shuffle-icon" aria-hidden="true">⟳</span> Generate palette</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="contrast-section" aria-labelledby="contrast-title">
+      <div class="section-heading"><div><p class="eyebrow"><span>02</span> A LITTLE MORE INTENTIONAL</p><h2 id="contrast-title">Check the contrast.</h2></div><p class="section-description">Preview how your colors work together in text. A useful signal for readability, not a complete accessibility audit.</p></div>
+      <div class="contrast-card">
+        <div class="contrast-controls">
+          <label>TEXT COLOR<select id="foreground-select" aria-label="Text color"></select></label>
+          <span class="contrast-swap" aria-hidden="true">on</span>
+          <label>BACKGROUND<select id="background-select" aria-label="Background color"></select></label>
+        </div>
+        <div class="contrast-preview" id="contrast-preview"><span class="preview-caption">A QUICK PREVIEW</span><p>Good design<br>is felt before<br>it’s noticed.</p><span class="preview-small">Thoughtful color makes all the difference.</span></div>
+        <div class="contrast-result" aria-live="polite"><div class="ratio-block"><span class="result-label">CONTRAST RATIO</span><strong id="contrast-ratio">—</strong></div><div class="badge-group" id="contrast-badges"></div></div>
+      </div>
+      <p class="disclaimer">WCAG contrast checks are one part of accessibility. They don’t guarantee that a design is accessible in every context.</p>
+    </section>
+
+    <section class="saved-section" aria-labelledby="saved-title">
+      <div class="section-heading saved-heading"><div><p class="eyebrow"><span>03</span> YOUR COLOR LIBRARY</p><h2 id="saved-title">Saved palettes<span class="saved-count" id="saved-count">0</span></h2></div><p class="section-description">The combinations you want to come back to.</p></div>
+      <div class="saved-grid" id="saved-palettes"></div>
+      <p class="empty-state" id="empty-state">No saved palettes yet. When you find a combination you love, save it here.</p>
+    </section>
+  </main>
+
+  <footer id="about"><span class="brand footer-brand"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>palettepair<span class="brand-period">.</span></span><p>Made for the curious eye. <span>Built with color and a little code.</span></p><a href="#top">Back to top ↑</a></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
