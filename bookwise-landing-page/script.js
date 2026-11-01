@@ -14,5 +14,5 @@ mainNav.querySelectorAll("a").forEach((link) => {
 });
 
 document.querySelector(".discover-button").addEventListener("click", () => {
-  document.querySelector("#discover").scrollIntoView({ behavior: "smooth", block: "center" });
+  document.querySelector("#discover").scrollIntoView({ behavior: "smooth", block: "center" })
 });
