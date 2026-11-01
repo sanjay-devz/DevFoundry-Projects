@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { font-family: 'DM Sans', sans-serif; font-synthesis: none; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; min-height: 100vh; }
+button { cursor: pointer; }
+.auth-input { display: block; width: 100%; margin-top: 0.6rem; border: 1px solid rgba(37,40,35,.16); border-radius: .8rem; background: rgba(255,255,255,.65); padding: .9rem 1rem; font: inherit; font-size: .875rem; outline: none; transition: border-color .15s, box-shadow .15s; }
+.auth-input:focus { border-color: #354b3b; box-shadow: 0 0 0 3px rgba(53,75,59,.13); }

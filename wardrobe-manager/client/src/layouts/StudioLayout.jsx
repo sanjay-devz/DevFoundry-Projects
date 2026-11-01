@@ -1,0 +1,10 @@
+import { CalendarDays, CircleUserRound, Heart, LogOut, Palette, Shirt, Sparkles, Wrench } from 'lucide-react'
+import { Link, NavLink, Outlet, useNavigate } from 'react-router-dom'
+import { useAuth } from '../context/AuthContext'
+
+export default function StudioLayout() {
+  const { user, logout } = useAuth(); const navigate = useNavigate()
+  async function signOut() { await logout(); navigate('/login', { replace: true }) }
+  const links=[['/studio','Overview',Sparkles],['/wardrobe','Wardrobe',Shirt],['/outfits','Outfits',Heart],['/planner','Planner',CalendarDays],['/colors','Colors',Palette],['/accessories','Accessories',Sparkles],['/maintenance','Care',Wrench]]
+  return <div className="min-h-screen bg-ivory text-ink"><header className="flex items-center justify-between border-b border-black/10 px-5 py-4 sm:px-8"><Link to="/studio" className="flex items-center gap-3"><span className="grid h-9 w-9 place-items-center rounded-full bg-forest text-white"><Shirt size={17}/></span><span className="text-xs font-semibold tracking-[0.12em] sm:text-sm">WARDROBE / STUDIO</span></Link><div className="flex items-center gap-3"><span className="hidden text-sm text-muted sm:block">{user?.name}</span><Link to="/account" className="rounded-full p-2 text-muted hover:bg-white" aria-label="Account settings"><CircleUserRound size={18}/></Link><button onClick={signOut} className="inline-flex items-center gap-2 rounded-full border border-black/15 px-4 py-2 text-xs hover:bg-white focus:outline-none focus:ring-2 focus:ring-forest"><LogOut size={14}/> Sign out</button></div></header><nav aria-label="Main navigation" className="flex gap-1 overflow-x-auto border-b border-black/10 px-4 py-2 sm:justify-center sm:px-8">{links.map(([to,label,Icon])=><NavLink key={to} to={to} end={to==='/studio'} className={({isActive})=>`inline-flex shrink-0 items-center gap-2 rounded-full px-3 py-2 text-xs transition ${isActive?'bg-forest text-white':'text-muted hover:bg-white hover:text-ink'}`}><Icon size={14}/>{label}</NavLink>)}</nav><main className="mx-auto max-w-6xl px-5 py-9 sm:px-8 sm:py-12"><Outlet/></main></div>
+}

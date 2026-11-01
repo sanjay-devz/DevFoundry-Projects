@@ -1,5 +1,12 @@
 {
-  "dependencies": {
-    "lucide-react": "^1.62.0"
-  }
+  "name": "wardrobe-manager",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "concurrently -n server,client -c green,cyan \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "build": "npm run build --prefix client",
+    "start": "npm run start --prefix server",
+    "test": "npm test --prefix client && npm test --prefix server"
+  },
+  "devDependencies": { "concurrently": "^9.1.2" }
 }
