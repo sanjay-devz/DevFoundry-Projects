@@ -15,3 +15,6 @@ A responsive frontend recreation of the supplied Figma design using HTML, CSS, a
 Book covers are loaded from Open Library and use placeholder images if a cover fails to load. Google Fonts are used for the typography, so those fonts require an internet connection.
 
 The Login button currently displays a demo message. Authentication and the AI recommendation flow should be connected later.
+
+
+#file added to repo
