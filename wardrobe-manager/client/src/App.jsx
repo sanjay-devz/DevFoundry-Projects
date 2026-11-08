@@ -41,7 +41,7 @@ function Home() {
         </div>
         <div className="relative mx-auto w-full max-w-[560px]">
           <div className="aspect-[0.94] overflow-hidden rounded-[44%_44%_8px_8px] bg-[#e7e3d8]">
-            <img className="h-full w-full object-cover" src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=85" alt="A thoughtfully styled neutral wardrobe" />
+            <img className="h-full w-full object-cover" src="https://ifgmages.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=85" alt="A thoughtfully styled neutral wardrobe" />
           </div>
           <div className="absolute -bottom-5 left-0 rounded-full border border-black/10 bg-ivory px-5 py-3 text-xs tracking-wide shadow-sm">LESS, BUT BETTER <span className="ml-2 text-forest">✳</span></div>
           <div className="absolute right-0 top-12 max-w-[170px] rounded-2xl bg-white/90 p-4 shadow-lg backdrop-blur"><p className="text-[10px] uppercase tracking-[0.16em] text-muted">This week</p><p className="mt-2 font-serif text-xl">Your kind of everyday.</p><p className="mt-2 text-xs text-muted">A little more room for what you love.</p></div>
@@ -49,4 +49,4 @@ function Home() {
       </section>
     </main>
   )
-  
+}
